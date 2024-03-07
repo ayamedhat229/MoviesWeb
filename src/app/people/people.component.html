@@ -1,0 +1,20 @@
+<div class="row py-5 gy-3">
+    <div class="col-md-4">
+        <div class="welcome">
+            <div class="brdr w-25 mb-3"></div>
+            <h3>Trending</h3>
+            <h3>Person</h3>
+            <h3>to watch now</h3>
+            <span class="text-muted">Most watched movies by days</span>
+            <div class="brdr w-100 mt-3"></div>
+        </div>
+    </div>
+    <div class="col-md-2" *ngFor="let person of personList">
+        <a class="nav-link" [routerLink]="['/details',person.id,person.media_type]">
+    <div class="item">
+        <img class="w-100" [src]="imgBaseUrl+person.profile_path">
+        <h2 class="h5">{{person.name}}</h2>
+    </div>
+        </a>
+    </div>
+</div>

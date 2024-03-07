@@ -1,0 +1,16 @@
+<div class="row py-5">
+    <div class="col-md-3">
+        <img *ngIf="itemDetails.poster_path" class="w-100 my-2" [src]="imgBaseUrl+itemDetails.poster_path">
+        <img *ngIf="itemDetails.profile_path" class="w-100 my-2" [src]="imgBaseUrl+itemDetails.profile_path">
+    </div>
+    <div class="col-md-9">
+        <h3 class="p-3">{{itemDetails.title}}{{itemDetails.name}}</h3>
+        <span *ngIf="itemDetails.release_date" class="p-3">Date: {{itemDetails.release_date}}</span>
+        <h5 *ngIf="itemDetails.vote_average"class="p-3">Vote Averge: {{itemDetails.vote_average}}</h5>
+        <h5 *ngIf="itemDetails.vote_count"class="p-3">Vote Count: {{itemDetails.vote_count}}</h5>
+        <h5 class="p-3">popularity: {{itemDetails.popularity}}</h5>
+        <h5 *ngIf="itemDetails.known_for_department" class="p-3">{{itemDetails.known_for_department}}</h5>
+       
+        <p class="p-3">{{itemDetails.overview}}</p>
+    </div>
+</div>

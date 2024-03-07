@@ -1,0 +1,23 @@
+<div class="row py-5 gy-3">
+    <div class="col-md-4">
+        <div class="welcome">
+            <div class="brdr w-25 mb-3"></div>
+            <h3>Now Playing</h3>
+            <span class="text-muted">Most watched movies by days</span>
+            <div class="brdr w-100 mt-3"></div>
+        </div>
+    </div>
+    <div class="col-md-2" *ngFor="let now_playing of movie">
+        
+    <div class="item">
+        <img class="w-100" [src]="imgBaseUrl+now_playing.poster_path">
+        <h2 class="h5">{{now_playing.title}}</h2>
+        <span>{{now_playing.release_date}}</span>
+    </div>
+        
+    </div>
+</div>
+
+
+
+

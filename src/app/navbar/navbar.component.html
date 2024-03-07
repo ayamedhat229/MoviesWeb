@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Noxe</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="home" router-Link-Active="active" *ngIf="isLogin">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="movies" routerLinkActive="active" *ngIf="isLogin">Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="tv" routerLinkActive="active" *ngIf="isLogin">Tv Show</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="people" routerLinkActive="active" *ngIf="isLogin">People</a>
+          </li>
+         
+         
+         
+         
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <div class="social-icon d-flex align-items-center">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-spotify"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="login" router-Link-Active="active" *ngIf="!isLogin">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="register" routerLinkActive="active" *ngIf="!isLogin">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)=" logOut()" routerLink="login" routerLinkActive="active" *ngIf="isLogin">Logout</a>
+          </li>
+          
+         
+        
+        </ul>
+      </div>
+    </div>
+  </nav>
